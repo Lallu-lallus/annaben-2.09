@@ -70,7 +70,7 @@ await bot.send_message(
           reply_to_message_id=update.message_id,
           parse_mode="html",
           reply_markup=reply_markup)
-          return
+          
     else:
         await auto_filter(client, message)   
 
