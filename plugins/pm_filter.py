@@ -687,7 +687,7 @@ async def advantage_spell_chok(msg):
         return
     user = msg.from_user.id if msg.from_user else 0
     imdb_s = await get_poster(query, bulk=True)
-    movielist = [movie.get📁('title')🎥 for movie in imdb_s]
+    movielist = [📁movie.get('title') for movie in imdb_s🎥]
     splitted = query.split()
     if len(splitted) > 10:
         k = await msg.reply("Are you telling the story of some movie??")
