@@ -64,12 +64,6 @@ async def give_filter(client,message):
                 except Exception as e:
                     print(e)
                 break 
-await bot.send_message(
-          text="<b> കിട്ടോ, അയക്കോ, ഉണ്ടോ, തരുമോ എന്ന് ഒന്നും ചോദിക്കേണ്ട സിനിമയുടെ പേര് മാത്രം കൃത്യമായി അയക്കുക</b> 😪",
-          chat_id=update.chat.id,
-          reply_to_message_id=update.message_id,
-          parse_mode="html",
-          reply_markup=reply_markup)
           
     else:
         await auto_filter(client, message)   
