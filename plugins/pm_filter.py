@@ -687,7 +687,7 @@ async def advantage_spell_chok(msg):
         return
     user = msg.from_user.id if msg.from_user else 0
     imdb_s = await get_poster(query, bulk=True)
-    movielist = [📁movie.get('title') for movie in imdb_s🎥]
+    movielist = [movie.get('title') for movie in imdb_s]
     splitted = query.split()
     if len(splitted) > 10:
         k = await msg.reply("Are you telling the story of some movie??")
@@ -708,7 +708,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply('I cant find anything related to that\nDid you mean any one of these?', reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply('Ningal chodicha movie ude correct ayittulla name thazhekaanunna correct ayittulla button click cheyyu click cheyyu🤠, I cant find anything related to that\nDid you mean any one of these?🤠', reply_markup=InlineKeyboardMarkup(btn))
     
 
 
